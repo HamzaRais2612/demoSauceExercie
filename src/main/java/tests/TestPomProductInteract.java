@@ -1,14 +1,17 @@
 package tests;
 
 import org.openqa.selenium.OutputType;
+
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import pages.LoginPageSauce;
 import pages.ProductPageSauce;
+
 
 import java.io.*;
 import java.util.concurrent.TimeUnit;
@@ -42,11 +45,11 @@ public class TestPomProductInteract {
 		ProductPageSauce pProductPageSauce = new ProductPageSauce(driver);
 		pProductPageSauce.vverfier_presence_Page_Products();
 		pProductPageSauce.cliquer_lien_produit_By_name(nomProduit);
-		pProductPageSauce.recupérer_et_comparer_Prix_et_description();
+		pProductPageSauce.recuperer_et_comparer_Prix_et_description();
 		pProductPageSauce.cliquer_ajouter_Panier();
 		pProductPageSauce.cliquer_Lien_Panier();
 		pProductPageSauce.verifier_page_panier();
-		pProductPageSauce.verifier_produit_ajouté_au_panier();
+		pProductPageSauce.verifier_produit_ajoute_au_panier();
 		pProductPageSauce.cliquer_bouton_Remove();
 		pProductPageSauce.verifier_non_presence_produit_By_name(nomProduit);
 

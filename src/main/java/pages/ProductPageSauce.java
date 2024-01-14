@@ -80,7 +80,7 @@ public class ProductPageSauce {
 	}
 	
 	
-	public void recupérer_et_comparer_Prix_et_description() {
+	public void recuperer_et_comparer_Prix_et_description() {
 		DescriptionDivWE = driver.findElement(DescriptionDivBy);
 		assertEquals(DescriptionDivWE.getText(), "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.");
 
@@ -104,7 +104,7 @@ public class ProductPageSauce {
 
 	}
 
-	public void verifier_produit_ajouté_au_panier() {
+	public void verifier_produit_ajoute_au_panier() {
 		titreProduitDivWE = driver.findElement(titreProduitDivBy);
 		assertEquals(titreProduitDivWE.getText(), "Sauce Labs Bike Light");
 
