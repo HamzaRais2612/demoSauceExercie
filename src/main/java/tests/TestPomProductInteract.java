@@ -1,0 +1,100 @@
+package tests;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import pages.LoginPageSauce;
+import pages.ProductPageSauce;
+
+import java.io.*;
+import java.util.concurrent.TimeUnit;
+
+
+public class TestPomProductInteract {
+
+	String nomProduit="Sauce Labs Bike Light";
+	String siteDemo="https://www.saucedemo.com/";
+	String username="Hamza";
+	WebDriver driver;
+	
+	@SuppressWarnings("deprecation")
+	@BeforeTest
+	public void Setup() {
+
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();  
+	}
+
+	@Test
+	public void loginFailTestPomProductInteractSauce() throws Exception {
+		//1
+		driver.get(siteDemo);
+		LoginPageSauce pLoginPageSauce = new LoginPageSauce(driver);
+		pLoginPageSauce.Verifier_Page_Login();
+		pLoginPageSauce.login("standard_user","secret_sauce");
+
+		ProductPageSauce pProductPageSauce = new ProductPageSauce(driver);
+		pProductPageSauce.vverfier_presence_Page_Products();
+		pProductPageSauce.cliquer_lien_produit_By_name(nomProduit);
+		pProductPageSauce.recupérer_et_comparer_Prix_et_description();
+		pProductPageSauce.cliquer_ajouter_Panier();
+		pProductPageSauce.cliquer_Lien_Panier();
+		pProductPageSauce.verifier_page_panier();
+		pProductPageSauce.verifier_produit_ajouté_au_panier();
+		pProductPageSauce.cliquer_bouton_Remove();
+		pProductPageSauce.verifier_non_presence_produit_By_name(nomProduit);
+
+
+		
+
+	}
+
+	@AfterTest
+	public void Teardown() throws Exception {
+		//close browser
+		this.takeSnapShot(driver, System.getProperty("user.dir")+"//Screenshots//test.png");
+
+		driver.close();
+	}
+
+	private void copyFileUsingStream(File source, File dest) throws IOException {
+		InputStream is = null;
+		OutputStream os = null;
+		try {
+			is = new FileInputStream(source);
+			os = new FileOutputStream(dest);
+			byte[] buffer = new byte[1024];
+			int length;
+			while ((length = is.read(buffer)) > 0) {
+				os.write(buffer, 0, length);
+			}
+		} finally {
+			is.close();
+			os.close();
+		}
+	}
+
+	private void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
+
+		//Convert web driver object to TakeScreenshot
+
+		TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+
+		//Call getScreenshotAs method to create image file
+
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+		//Move image file to new destination
+
+		File DestFile=new File(fileWithPath);
+		this.copyFileUsingStream(SrcFile, DestFile);
+
+	}
+
+}

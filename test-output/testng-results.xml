@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-14T21:58:47 WEST" name="Default suite" finished-at="2024-01-14T21:59:16 WEST" duration-ms="29183">
+    <groups>
+    </groups>
+    <test started-at="2024-01-14T21:58:47 WEST" name="loginFailSauce" finished-at="2024-01-14T21:58:49 WEST" duration-ms="2740">
+      <class name="tests.loginFailSauce">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.loginFailSauce@5fe94a96]" started-at="2024-01-14T21:58:47 WEST" name="Setup" finished-at="2024-01-14T21:58:48 WEST" duration-ms="1663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="loginFailSauce()[pri:0, instance:tests.loginFailSauce@5fe94a96]" started-at="2024-01-14T21:58:48 WEST" name="loginFailSauce" finished-at="2024-01-14T21:58:49 WEST" duration-ms="755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailSauce -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:tests.loginFailSauce@5fe94a96]" started-at="2024-01-14T21:58:49 WEST" name="Teardown" finished-at="2024-01-14T21:58:49 WEST" duration-ms="289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- tests.loginFailSauce -->
+    </test> <!-- loginFailSauce -->
+    <test started-at="2024-01-14T21:58:50 WEST" name="loginFailSauceFactory" finished-at="2024-01-14T21:58:52 WEST" duration-ms="1948">
+      <class name="tests.loginFailSauceFactory">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.loginFailSauceFactory@f5958c9]" started-at="2024-01-14T21:58:50 WEST" name="Setup" finished-at="2024-01-14T21:58:50 WEST" duration-ms="763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="loginFailSauceFactory()[pri:0, instance:tests.loginFailSauceFactory@f5958c9]" started-at="2024-01-14T21:58:50 WEST" name="loginFailSauceFactory" finished-at="2024-01-14T21:58:51 WEST" duration-ms="906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailSauceFactory -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:tests.loginFailSauceFactory@f5958c9]" started-at="2024-01-14T21:58:51 WEST" name="Teardown" finished-at="2024-01-14T21:58:52 WEST" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- tests.loginFailSauceFactory -->
+    </test> <!-- loginFailSauceFactory -->
+    <test started-at="2024-01-14T21:58:52 WEST" name="TestPomProductInteract" finished-at="2024-01-14T21:59:04 WEST" duration-ms="12159">
+      <class name="tests.TestPomProductInteract">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.TestPomProductInteract@9d5509a]" started-at="2024-01-14T21:58:52 WEST" name="Setup" finished-at="2024-01-14T21:58:52 WEST" duration-ms="780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="loginFailTestPomProductInteractSauce()[pri:0, instance:tests.TestPomProductInteract@9d5509a]" started-at="2024-01-14T21:58:52 WEST" name="loginFailTestPomProductInteractSauce" finished-at="2024-01-14T21:59:03 WEST" duration-ms="11122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailTestPomProductInteractSauce -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:tests.TestPomProductInteract@9d5509a]" started-at="2024-01-14T21:59:03 WEST" name="Teardown" finished-at="2024-01-14T21:59:04 WEST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- tests.TestPomProductInteract -->
+    </test> <!-- TestPomProductInteract -->
+    <test started-at="2024-01-14T21:59:04 WEST" name="TestPomProductInteractFactory" finished-at="2024-01-14T21:59:16 WEST" duration-ms="12258">
+      <class name="tests.TestPomProductInteractFactory">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:tests.TestPomProductInteractFactory@62ddbd7e]" started-at="2024-01-14T21:59:04 WEST" name="Setup" finished-at="2024-01-14T21:59:04 WEST" duration-ms="813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="TestPomProductInteractFactory()[pri:0, instance:tests.TestPomProductInteractFactory@62ddbd7e]" started-at="2024-01-14T21:59:04 WEST" name="TestPomProductInteractFactory" finished-at="2024-01-14T21:59:16 WEST" duration-ms="11185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPomProductInteractFactory -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:tests.TestPomProductInteractFactory@62ddbd7e]" started-at="2024-01-14T21:59:16 WEST" name="Teardown" finished-at="2024-01-14T21:59:16 WEST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- tests.TestPomProductInteractFactory -->
+    </test> <!-- TestPomProductInteractFactory -->
+  </suite> <!-- Default suite -->
+</testng-results>
